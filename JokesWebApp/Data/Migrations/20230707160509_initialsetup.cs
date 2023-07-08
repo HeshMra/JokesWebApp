@@ -6,9 +6,7 @@ namespace JokesWebApp.Data.Migrations
 {
     public partial class initialsetup : Migration
     {
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.CreateTable(
+        protected override void Up(MigrationBuilder migrationBuilder) => migrationBuilder.CreateTable(
                 name: "Joke",
                 columns: table => new
                 {
@@ -21,12 +19,8 @@ namespace JokesWebApp.Data.Migrations
                 {
                     table.PrimaryKey("PK_Joke", x => x.Id);
                 });
-        }
 
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.DropTable(
+        protected override void Down(MigrationBuilder migrationBuilder) => migrationBuilder.DropTable(
                 name: "Joke");
-        }
     }
 }
